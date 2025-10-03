@@ -4,16 +4,19 @@ import LandingPage from './pages/landingPage';
 import CreatorPage from './pages/creatorPage';
 import ProyectsPage from './pages/proyectsPage';
 import Navbar from './components/Navbar';
+import PageContainer from './common/pagecontainer';
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<LandingPage />} />
-        <Route path='/creator' element={<CreatorPage />} />
-        <Route path='/proyects' element={<ProyectsPage />} />
-      </Routes>
+      <Navbar />
+      <PageContainer>
+        <Routes>
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/creator' element={<CreatorPage />} />
+          <Route path='/proyects' element={<ProyectsPage />} />
+        </Routes>
+      </PageContainer>
     </>
   );
 };
